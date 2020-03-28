@@ -6,7 +6,7 @@ sudo: required
 jdk:
   - openjdk11
 
-script: :
+script:
   - mvn compile jib:build
 
 #after_success:
