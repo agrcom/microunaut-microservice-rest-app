@@ -10,3 +10,13 @@ https://piotrminkowski.com/2019/01/25/quick-guide-to-microservices-with-micronau
 
 ## Build your container image with:
 ``` mvn compile jib:build ```
+
+## Versioning
+
+### set new version
+ '''mvn versions:set -DnewVersion=1.0.1-SNAPSHOT'''
+
+### set new versions for child modules
+ '''mvn versions:set versions:update-child-modules -DnewVersion=1.0.1-SNAPSHOT'''
+
+
