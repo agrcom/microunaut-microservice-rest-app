@@ -7,7 +7,7 @@ jdk:
   - openjdk11
 
 script:
-  - mvn compile jib:build
+  - mvn compile jib:build -Djib.to.auth.username=$USERNAME -Djib.to.auth.password=$PASSWORD
 
 #after_success:
 #  # push application image to docker registry
