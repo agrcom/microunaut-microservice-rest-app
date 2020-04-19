@@ -18,10 +18,10 @@ public class DepartmentRepository {
         return department;
     }
 
-    public Department findById(Long id) {
+    public Department findById(Long id) throws Exception {
         Optional<Department> department = repository.stream().filter(d -> d.getId().equals(id)).findFirst();
 
-        return department.orElseGet(Department::new);
+        return department.orElseThrow(() -> new Exception("Empty repository"));
     }
 
     public List<Department> findAll() {
